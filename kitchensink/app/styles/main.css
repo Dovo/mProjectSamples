@@ -1,0 +1,158 @@
+.custom-list .col-xs-2 {
+    height: 44px;
+    width: 44px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.stencil div {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.stencil i {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.m-tab .textview.stencil {
+    background: none;
+}
+
+
+.m-tab .stencil{
+    background: none;
+}
+
+.m-tab .textview.stencil .input-icon-addon,
+.m-tab .textview.stencil i {
+    text-shadow: rgba(182, 183, 185, 0.5) 0px 3px 3px;
+    background-color: #000000;
+}
+
+.m-tab:nth-child(1) {
+    background: #1092d3;
+}
+
+.m-tab:nth-child(2) {
+    background: #6c64ff;
+}
+
+.m-tab:nth-child(3) {
+    background: #2dcca2;
+}
+
+.m-tab:nth-child(4) {
+    background: #ed253d;
+}
+
+.m-tab:nth-child(5) {
+    background: #f45b42;
+}
+
+.m-tab:nth-child(6) {
+    background: #eab13a;
+}
+
+.scroll-up{
+    margin-top: 500px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.splitBackButton .button {
+    border: 0;
+    font-size: 1.4em;
+    padding:0;
+    text-align: left;
+    padding: 0.6em 0.8em;
+    margin-bottom: 0;
+    background: none;
+}
+
+.splitlayout .listitemview li {
+    height: 50px;
+}
+
+.splitBackKitchensink .button {
+    border:0;
+}
+
+.splitlayout .listview {
+    margin-bottom: 5px;
+}
+
+.splitlayout .menu-button .button {
+    background: none;
+    color: #fff;
+    font-size: 34px;
+    border: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.splitlayout .menu-button.active .button {
+    background: none;
+    color: #ccc;
+}
+
+.splitlayout.hide-menu-button .menu-button {
+    display: none;
+}
+
+.split-content {
+    padding: 20px 0 30px 0;
+}
+
+.listview ul .list-item-header li,
+.listview ul .list-item-footer li{
+    font-size: 10px;
+    padding: 2px 15px;
+}
+
+.odd{
+    background: rgb(218, 218, 218);
+}
+
+.even{
+    background: rgb(232, 232, 232);
+}
+
+.movable-bg {
+    background: lightblue;
+    height: 100%;
+}
+
+.movableview {
+    height: 85px;
+    background: none;
+    border-bottom: 1px dotted white;
+}
+
+.movableview {
+     padding-top: 10px;
+     padding-bottom: 30px;
+}
+
+.movableview .movable-element {
+    font-size: 93px;
+    background: none;
+    color: white;
+}
+
+.switch-menu-header-content-layout .content-wrapper{
+    padding-bottom: 30px;
+}
+
+.menu-button i{
+    text-indent: -15px;
+}
+
+.menu-open .menu-button i{
+    text-indent: -25px;
+}
