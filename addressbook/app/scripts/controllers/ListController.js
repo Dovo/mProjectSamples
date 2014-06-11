@@ -46,7 +46,7 @@
         },
 
         gotoKivaPage: function() {
-            Addresbook.navigate({
+            Addressbook.navigate({
                 route: '/kiva'
             });
         },

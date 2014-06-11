@@ -6,7 +6,7 @@
 
         editModel: M.Model.create(),
 
-        applicationStart: function( ) {
+        applicationStart: function() {
 
             Addressbook.setLayout(M.AppLayout.design(this, null, true));
 
