@@ -1,5 +1,6 @@
 {
     "global": {
+        "kiva": "Kiva",
         "add": "Add",
         "save": "Save",
         "edit": "Edit",

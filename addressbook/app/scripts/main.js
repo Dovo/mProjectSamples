@@ -17,6 +17,7 @@
                     'detail/:id': 'detailCtrl',
                     'edit/:id': 'editCtrl',
                     'add': 'addCtrl',
+                    //'kiva': 'kivaCtrl',
                     //m:routes
                 },
 
@@ -29,6 +30,7 @@
                 detailCtrl: Addressbook.Controllers.DetailController.create(),
                 editCtrl: Addressbook.Controllers.EditController.create(),
                 addCtrl: Addressbook.Controllers.AddController.create(),
+                //kivaCtrl: Addressbook.Controllers.KivaController.create(),
                 //m:controllers
             }
         });

@@ -45,6 +45,12 @@
             });
         },
 
+        gotoKivaPage: function() {
+            Addresbook.navigate({
+                route: '/kiva'
+            });
+        },
+
         _initView: function( ) {
             if( !this.contactCollection ) {
 
@@ -79,16 +85,17 @@
                         }
                     }
                 },{
-//                    first: M.View.extend({},{
-//
-//                        tutorial: M.ButtonView.extend({
-//                            value: M.I18N.get('global.show_tutorial'),
-//                            useElement: YES,
-//                            events: {
-//                                tap: 'showTutorial'
-//                            }
-//                        })
-//                    }),
+                   first: M.View.extend({},{
+
+                       kivaButton: M.ButtonView.extend({
+                           cssClass: 'btn-success',
+                           value: M.I18N.get('global.kiva'),
+                           useElement: YES,
+                           events: {
+                               tap: 'gotoKivaPage'
+                           }
+                       })
+                   }),
                     second: M.View.extend({},{
 
                         addButton: M.ButtonView.extend({
