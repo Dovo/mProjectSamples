@@ -19,3 +19,8 @@ If you are looking for an easy setup process for all sample applications run:
 The script runs the following commands:
   - ```npm install```
   - ```bower install```
+
+
+To compile android apk:
+  1. 
+  2. 
