@@ -6,12 +6,12 @@
 // View: ListViewTemplate
 // ==========================================================================
 //Used for layout of loans list
-KivaApp.ListViewTemplate = M.ListItemView.design({
+Addressbook.ListViewTemplate = M.ListItemView.design({
 
     // tap event that takes use to Loan Item page for selected Borrower
     events: {
         tap: {
-            target: KivaApp.LoansListController
+            target: Addressbook.LoansListController
             ,action: 'listObjectClicked'
         }
     }
