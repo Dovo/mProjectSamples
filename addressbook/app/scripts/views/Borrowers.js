@@ -2,19 +2,59 @@
 
 Addressbook.Views = Addressbook.Views || {};
 
+
+
 (function () {
     'use strict';
-
     Addressbook.Views.BorrowersView = M.View.extend({
-        // The properties of a view
-        initialize: function() {
-        	this.collection = new Addressbook.Collections.BorrowersCollection;
-        	var that = this;
-        	this.collection.fetch({
-        		success: function() {
-        			that.render();
-        		}
-        	});
-        },
-    });
+        
+        template: '<div><div data-childviews="content"></div></div>'
+
+    }, {
+
+        content: M.View.extend({
+            cssClass: 'content-wrapper-no'
+
+        }, {
+
+            borrowerList: M.ListView.extend({
+                
+                grid: 'col-xs-12',
+
+                scopeKey: 'kivaListView',
+                
+                borrowerItemView: M.ListItemView.extend({
+                    
+                    cssClass: '',
+                    extendTemplate: 
+                        '<div class="row"><div class="col-xs-7 col-xs-offset-1"><div class="name ellipsis"><span class="lastname"><%= name %></span><span class="lastname"><%= status %></span><span class="lastname"><%= use %></span></div></div></div>',
+                    useElement: YES,
+                    
+                    events: {
+                        //no events yet
+                    }
+                })
+            })
+        })
+    })
 })();
+
+
+
+
+// (function () {
+//     'use strict';
+
+//     Addressbook.Views.BorrowersView = M.View.extend({
+//         // The properties of a view
+//         initialize: function() {
+//         	this.collection = new Addressbook.Collections.BorrowersCollection;
+//         	var that = this;
+//         	this.collection.fetch({
+//         		success: function() {
+//         			that.render();
+//         		}
+//         	});
+//         },
+//     });
+// })();

@@ -6,6 +6,10 @@ Addressbook.Models = Addressbook.Models || {};
     'use strict';
 
     Addressbook.Models.BorrowersModel = M.Model.extend({
-        idAttribute: '_id'
+        idAttribute: '_id',
+
+        entity: {
+        	name: 'borrower'
+        }
     });
 })();

@@ -2,6 +2,8 @@
 
     Addressbook.Controllers.KivaController = M.Controller.extend({
 
+        kivaCollection: null,
+
         kivaListView: null,
 
         editModel: M.Model.create(),
@@ -10,7 +12,7 @@
 
             Addressbook.setLayout(M.AppLayout.design(this, null, true));
 
-            this._initView( );
+            this._initView();
 
             Addressbook.getLayout().applyViews({
                 header: this.header,
@@ -37,11 +39,25 @@
         },
 
         _initView: function( ) {
-            if( !this.kivaListView ) {
+            if(!this.kivaCollection) {
+                this.kivaCollection = new Addressbook.Collections.BorrowersCollection();
+            
+                var that = this;
+                this.kivaCollection.fetch({
+                    success: function() {
+                        console.log("Got borrowers");
+                    },
+                    error: function() {
+                        console.log("Error fetching borrowers");
+                    }
+                });
+            }
+
+            if(!this.kivaListView) {
                 this.kivaListView = Addressbook.Views.BorrowersView.create(this, null, true);
             }
 
-            if( !this.header ) {
+            if(!this.header) {
                 this.header = M.ToolbarView.extend({
                     value: M.I18N.get('global.add')
                 }, {
@@ -66,14 +82,7 @@
                     })
                 }).create(this, null, true);
             }
-        },
-
-        addEntry: function( event, element ) {
-            element.scope.set('currentModel', Addressbook.contactCollection.create(element.scope.editModel.attributes));
-            this.back();
-            //M.Toast.show({text: M.I18N.l('global.succ_add'), timeout: M.Toast.MEDIUM});
         }
-
     });
 
 })(this);
