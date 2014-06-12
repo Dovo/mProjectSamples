@@ -10,6 +10,7 @@ Addressbook.Collections = Addressbook.Collections || {};
         url: 'http://api.kivaws.org/v1/loans/newest.json',
         parse: function(response) {
         	console.log(response.loans);
+            return response.loans;
         },
         sync: function(method, model, options) {
         	var that = this;
