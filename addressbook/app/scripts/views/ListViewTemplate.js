@@ -20,7 +20,8 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
     
     ,childViews: 'photo description progress action'
     
-    ,photo: M.ContainerView.design({
+    ,photo: M.View.design({
+//,photo: M.View.design({
         cssClass: 'kv_overlayContainer'
         ,childViews: 'img info'
 
@@ -34,21 +35,23 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
             }
         })
 
-        ,info: M.ContainerView.design({
+        ,info: M.View.design({
+//,info: M.View.design({
             cssClass: 'kv_info'
             ,childViews: 'name location'
 
-            ,name: M.LabelView.design({
+            ,name: M.TextareaView.design({
                 cssClass: 'borrower_name'
                 ,valuePattern: '<%= name %>'       
             
             })
             
-            ,location: M.ContainerView.design({
+            ,location: M.View.design({
+//,location: M.View.design({
                 cssClass: 'borrower_country'
                 ,childViews: 'flag country activity'
 
-                ,flag: M.LabelView.design({
+                ,flag: M.TextareaView.design({
                     computedValue: {
                         valuePattern: '<%= location %>'
                         ,operation: function(location) {
@@ -58,7 +61,7 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
                     ,isInline: YES
                 })
 
-                ,country: M.LabelView.design({
+                ,country: M.TextareaView.design({
                     computedValue: {
                         valuePattern: '<%= location %>'
                         ,operation: function(location) {
@@ -68,7 +71,7 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
                     ,isInline: YES
                 })
 
-                ,activity: M.LabelView.design({
+                ,activity: M.TextareaView.design({
                     computedValue: {
                         valuePattern: '<%= activity %>'
                         ,operation: function(a) {
@@ -82,7 +85,7 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
         })
     })
 
-    ,description: M.LabelView.design({
+    ,description: M.TextareaView.design({
         cssClass: 'borrower_loan_use'
         ,valuePattern: '<%= use %>'
         ,computedValue: {
@@ -93,16 +96,16 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
         }
     })
 
-    ,progress: M.ContainerView.design({
+    ,progress: M.View.design({
         childViews: 'text bar'
         ,cssClass: 'kv_progressArea'
 
-        ,text: M.LabelView.design({
+        ,text: M.TextareaView.design({
             cssClass: 'kv_progressText'
             ,valuePattern: '<%= progressText %>'
         })
 
-        ,bar: M.LabelView.design({
+        ,bar: M.TextareaView.design({
             cssClass: 'kv_fundMeter'
             ,computedValue: {
                 valuePattern: '<%= percent %>'
@@ -123,11 +126,11 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
         })
     })
 
-    ,action: M.ContainerView.design({
+    ,action: M.View.design({
         childViews: 'lend25 readMore'
         ,cssClass: 'kv_actionArea'
 
-        ,lend25: M.LabelView.design({
+        ,lend25: M.TextareaView.design({
             cssClass: 'kv_loanCardAction'
             ,computedValue: {
                 valuePattern: '<%= status %>'
@@ -167,7 +170,7 @@ Addressbook.ListViewTemplate = M.ListItemView.design({
             }
         })
 
-        ,readMore: M.LabelView.design({
+        ,readMore: M.TextareaView.design({
             cssClass: 'kv_loanCardAction'
             ,value: '<span class="ui-btn ui-btn-up-a">' +
                 '       <span class="ui-btn-inner">' +

@@ -2,7 +2,7 @@
 
     Addressbook.Controllers.KivaController = M.Controller.extend({
 
-        detailView: null,
+        kivaListView: null,
 
         editModel: M.Model.create(),
 
@@ -14,7 +14,7 @@
 
             Addressbook.getLayout().applyViews({
                 header: this.header,
-                content: this.detailView
+                content: this.kivaListView
             });
         },
 
@@ -23,7 +23,7 @@
 
             Addressbook.getLayout().applyViews({
                 header: this.header,
-                content: this.detailView
+                content: this.kivaListView
             });
             Addressbook.getLayout().startTransition();
         },
@@ -37,8 +37,8 @@
         },
 
         _initView: function( ) {
-            if( !this.detailView ) {
-                this.detailView = Addressbook.Views.EditView.create(this, null, true);
+            if( !this.kivaListView ) {
+                this.kivaListView = Addressbook.Views.BorrowersView.create(this, null, true);
             }
 
             if( !this.header ) {
