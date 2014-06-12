@@ -13,21 +13,22 @@ Addressbook.Views = Addressbook.Views || {};
     }, {
 
         content: M.View.extend({
+            
             cssClass: 'content-wrapper-no'
 
         }, {
 
             borrowerList: M.ListView.extend({
                 
-                grid: 'col-xs-12',
+                //grid: 'col-xs-12',
 
-                scopeKey: 'kivaListView',
+                scopeKey: 'kivaCollection',
                 
                 borrowerItemView: M.ListItemView.extend({
                     
                     cssClass: '',
-                    extendTemplate: 
-                        '<div class="row"><div class="col-xs-7 col-xs-offset-1"><div class="name ellipsis"><span class="lastname"><%= name %></span><span class="lastname"><%= status %></span><span class="lastname"><%= use %></span></div></div></div>',
+                    extendTemplate: '<div class="row"><div class="col-xs-7 col-xs-offset-1"><div class="name ellipsis"><span class="lastname"><%= name %></span><span class="lastname"><%= id %></span><span class="lastname"><%= use %></span></div></div></div>',
+                    
                     useElement: YES,
                     
                     events: {

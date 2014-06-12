@@ -40,7 +40,7 @@
 
         _initView: function( ) {
             if(!this.kivaCollection) {
-                this.kivaCollection = new Addressbook.Collections.BorrowersCollection();
+                Addressbook.kivaCollection = this.kivaCollection = new Addressbook.Collections.BorrowersCollection();
             
                 var that = this;
                 this.kivaCollection.fetch({
