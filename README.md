@@ -25,5 +25,10 @@ To compile android apk:
   1. 
   2. 
 
+To install apk on emulator
+  - ```android``` in terminal
+  - Open AVD manager and run an instance of the emulator
+  - ```adb install /path/to/file.apk```
+
 To listen to console remotely (note that when this script is active, console.log does not output to browser) 
   1. Go to http://jsconsole.com/?%3Alisten%205BE22AB1-A912-40DF-8DAE-377D9B4C06DB
