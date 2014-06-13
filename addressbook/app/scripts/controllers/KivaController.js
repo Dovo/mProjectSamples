@@ -42,10 +42,11 @@
             if(!this.kivaCollection) {
                 Addressbook.kivaCollection = this.kivaCollection = new Addressbook.Collections.BorrowersCollection();
             
-                var that = this;
+                //var that = this;
                 this.kivaCollection.fetch({
                     success: function() {
                         console.log("Got borrowers");
+                        console.log(this.kivaCollection); //why is this undefined
                     },
                     error: function() {
                         console.log("Error fetching borrowers");
