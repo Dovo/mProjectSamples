@@ -24,12 +24,12 @@ Addressbook.Views = Addressbook.Views || {};
 
                 scopeKey: 'kivaCollection',
                 
-                borrowerItemView: M.ListItemView.extend({
+                listItemView: M.ListItemView.extend({
                     
                     cssClass: '',
                     extendTemplate: '<div class="row"><div class="col-xs-7 col-xs-offset-1"><div class="name ellipsis"><span class="lastname"><%= name %></span><span class="lastname"><%= id %></span><span class="lastname"><%= use %></span></div></div></div>',
                     
-                    useElement: YES,
+                    //useElement: YES,
                     
                     events: {
                         //no events yet
@@ -39,9 +39,6 @@ Addressbook.Views = Addressbook.Views || {};
         })
     })
 })();
-
-
-
 
 // (function () {
 //     'use strict';

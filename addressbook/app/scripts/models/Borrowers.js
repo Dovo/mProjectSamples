@@ -7,11 +7,11 @@ Addressbook.Models = Addressbook.Models || {};
 
     Addressbook.Models.BorrowersModel = M.Model.extend({
         idAttribute: '_id',
-        defaults: {
-        	name: 'NAME',
-        	id: 'ID',
-        	use: 'USE'
-        }
+        // defaults: {
+        // 	name: 'NAME',
+        // 	id: 'ID',
+        // 	use: 'USE'
+        // },
         // entity: {
         // 	name: 'borrower'
         // }
