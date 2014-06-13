@@ -47,7 +47,8 @@
 
         gotoKivaPage: function() {
             Addressbook.navigate({
-                route: '/kiva'
+                route: '/kiva',
+                transition: M.PageTransitions.CONST.MOVE_TO_RIGHT_FROM_LEFT
             });
         },
 
@@ -117,15 +118,15 @@
 
         registerEvents: function(){
             this.listenTo(this.contactCollection, 'change', function ( model ) {
-                M.Toast.show('Updated ' + model.get('firstname') + ' ' + model.get('lastname'));
+                //M.Toast.show('Updated ' + model.get('firstname') + ' ' + model.get('lastname'));
             });
 
             this.listenTo(this.contactCollection, 'add', function ( model ) {
-                M.Toast.show('Added ' + model.get('firstname') + ' ' + model.get('lastname'));
+                //M.Toast.show('Added ' + model.get('firstname') + ' ' + model.get('lastname'));
             });
 
             this.listenTo(this.contactCollection, 'remove', function ( model ) {
-                M.Toast.show('Removed ' + model.get('firstname') + ' ' + model.get('lastname'));
+               // M.Toast.show('Removed ' + model.get('firstname') + ' ' + model.get('lastname'));
             });
         },
 

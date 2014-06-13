@@ -34,7 +34,8 @@
             this.editModel.set('firstname', '');
             this.editModel.set('lastname', '');
             Addressbook.navigate({
-                route: '/'
+                route: '/',
+                transition: M.PageTransitions.CONST.MOVE_TO_LEFT_FROM_RIGHT
             });
         },
 
