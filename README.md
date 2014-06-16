@@ -1,7 +1,5 @@
 # The-M-Project - Absinthe Sample Apps
-
-[Looking for the Samples of The-M-Project 1.x?](https://github.com/mwaylabs/The-M-Project-Sample-Apps/tree/1.x)
-
+## README still a work in progress
 ## Setup
 
 - Navigate to a sample app ```cd kitchensink/```
@@ -22,13 +20,16 @@ The script runs the following commands:
 
 
 To compile android apk:
-  1. 
+  1. Navigate to the native/ folder
   2. 
 
 To install apk on emulator
   - ```android``` in terminal
   - Open AVD manager and run an instance of the emulator
   - ```adb install /path/to/file.apk```
+Alternatively:
 
+  - run ```cordova emulate android``` in the project/native folder
+  - 
 To listen to console remotely (note that when this script is active, console.log does not output to browser) 
   1. Go to http://jsconsole.com/?%3Alisten%205BE22AB1-A912-40DF-8DAE-377D9B4C06DB
