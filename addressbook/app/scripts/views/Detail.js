@@ -1,7 +1,7 @@
 Addressbook.Views = Addressbook.Views || {};
 
 (function() {
-    'use strict'
+    'use strict';
     Addressbook.Views.DetailView = M.View.extend({
         cssClass: 'detail-page'
     }, {
